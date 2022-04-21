@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Task
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int size, even=0, odd=0;
+            int[] arr;
+
+            //input size of the array
+            Console.Write("Enter size of the array: ");
+            size = Convert.ToInt32(Console.ReadLine());
+
+            //input array elements
+            Console.WriteLine("Enter {0} elements in array:", size);
+
+            arr = new int[size];
+            for (int i = 0; i < size; i++)
+            {
+                Console.Write("Number({0}) :", i + 1);
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+           
+            for (int i = 0; i < size; i++)
+            {
+               
+                if (arr[i] % 2 == 0)
+                {
+                   even++;
+                }
+               else
+                {
+                    odd++;
+                }
+            }
+
+            Console.Write("Total even elements: {0}\n", even);
+            Console.Write("total odd elements: {0}\n", odd);
+           
+
+            Console.ReadLine();
+        }
+    }
+  }
